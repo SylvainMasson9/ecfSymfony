@@ -1,0 +1,122 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<div class="text-center my-3">
+		<div class="row">
+			<div class="col">
+				{% if bien.photo %}
+					<img src="https://fakeimg.pl/500x400/" text={{bien.title}} class="card-img-top">
+				{% else %}
+					
+					<h2 class="text-danger"> pas de photos.</h2>
+				{% endif %}
+				<h5 class="card-title">{{bien.title}}</h5>    
+                <br>
+                <p class="class-text">Nombre de surface: {{bien.surface}}</p>
+                
+                <p class="card-text">Nombre de pieces: {{bien.nombreDePiece}}</p>
+                <p class="card-text">{{bien.prix}} $ </p>
+			</div>
+			<div class="col">
+				<p class="h3">Prendre rendez-vous pour visiter le bien:
+				</p>
+				<br>
+				<div class="form-floating">
+					<input type="text" class="form-control" id="floatingInputValue" value="prenom">
+					<label for="floatingInputValue">Prénom</label>
+				</div>
+				<br>
+				<div class="form-floating">
+					<input type="text" class="form-control" id="floatingInputValue" value="nom">
+					<label for="floatingInputValue">Nom</label>
+				</div>
+				<br>
+				<div class="form-floating">
+					<input type="email" class="form-control" id="floatingInputInValue" placeholder="name@example.com" value="test@example.com">
+					<label for="floatingInputInValue">Invalid input</label>
+				</div>
+				<br>
+				<div class="form-floating">
+					<input type="email" class="form-control" id="floatingInputInValue" placeholder="name@example.com" value="test@example.com">
+					<label for="floatingInputInValue">Invalid input</label>
+				</div>
+				<br>
+				<p>Date de rendez-vous:
+				</p>
+				<div class="row g-2">
+					<div class="col-md">
+						<div class="form-floating">
+							<select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+								<option selected>jour</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+
+							</select>
+							
+						</div>
+					</div>
+					<div class="col-md">
+						<div class="form-floating">
+							<select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+								<option selected>Mois</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select>
+							
+						</div>
+					</div>
+					<div class="col-md">
+						<div class="form-floating">
+							<select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+								<option selected>Année</option>
+								<option value="1">2022</option>
+								<option value="2">2023</option>
+								<option value="3">2024</option>
+							</select>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
